@@ -1,0 +1,10 @@
+Options -Indexes
+
+RewriteEngine ON
+
+RewriteRule ^index\.php$ - [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond $1 !^(index\.php|sidu|images|styles|scripts|plugins|user_guide|robots\.txt|tmp)
+RewriteRule ^(.*)$ /index.php/$1 [L]

@@ -1,0 +1,35 @@
+footer{
+	width:100%;
+	clear:both;
+	padding-top:100px;
+}
+
+footer h3{
+        font-size: 14px;
+	font-family: "arial","sans-serif";
+	font-weight: bold;
+	color: #E47911;
+	margin: 0 0 8px 0;
+	white-space: nowrap;
+}
+footer article{
+	width:1000px;
+	margin-right:auto;
+	margin-left:auto;
+	margin-top:25px;
+	margin-bottom:25px;
+}
+footer section{
+	display:inline-block;
+	float:left;
+	width:25%;
+}
+footer div{
+	color: rgb(0, 75, 145);
+	font-family: arial, helvetica, sans-serif;
+	font-size: 13px;
+	line-height: 25px;
+	text-decoration: none solid rgb(0, 75, 145);
+	white-space: nowrap;
+}
+

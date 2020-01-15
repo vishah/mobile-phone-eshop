@@ -1,0 +1,122 @@
+.main{
+	width:550px;
+	margin-right:auto;
+	margin-left:auto;
+}
+
+.top{
+	width:550px;
+	height:50px;
+	margin-top:20px;
+}
+
+.logo{
+	float:left;
+	margin-left:10px;
+	width:100;
+	height:55;
+}
+
+.toplinks{
+	float:right;
+}
+
+.toplinks a{
+	font-family:Verdana;
+	font-size:12px;
+	color: rgb(0, 75, 145);
+}
+
+.middle{
+	border:1px solid #C9E1F4;
+	border-radius:10px;
+	padding:14px;
+	margin-top:20px;
+}
+
+h1{
+	color: rgb(228, 121, 17);
+	font-family: Verdana;
+	font-size: 15.6px;
+	font-weight: 700;
+	text-align: left;
+	margin-top:0px;
+}
+h2{
+	margin-top:20px;
+	color: rgb(228, 121, 17);
+	font-family: Verdana;
+	font-size: 13px;
+	font-weight: 700;
+	text-align: left;
+}
+
+.login-label{
+	margin-left:25px;
+	color:black;
+	font-family: Verdana;
+	font-size: 13px;
+	font-weight: 700;
+	text-align: left;
+}
+
+.register-label{
+	color:black;
+	font-family: Verdana;
+	font-size: 13px;
+	font-weight: 700;
+	text-align: left;
+}
+
+.reglbl-cnt{
+	display:inline-block;
+	width:208px;
+	margin-bottom:10px;
+}
+
+.submitcont{
+	margin-left:25px;
+	margin-top:25px;
+	margin-bottom:25px;
+}
+
+.reg-submit-cnt{
+	margin-left:208px;
+	margin-bottom:25px;	
+}
+
+.notice{
+	color: rgb(0, 0, 0);
+	font-family: Verdana;
+	font-size: 13px;
+	text-align: left;
+}
+
+.copyright{
+	margin-top:15px;
+	color: rgb(0, 0, 0);
+	font-weight: 400;
+	font-family: Verdana;
+	font-size: 10px;
+	text-align: center;
+}
+
+.help{
+	margin-top:20px;
+	padding-bottom:20px;
+	border-bottom:1px solid #C9E1F4;
+}
+
+.help div{
+	font-family: Verdana;
+	font-size: 12px;
+}
+
+.login_message{
+	margin-top:20px;
+        color: #DD0000;
+        font-family: Arial,Verdana,Helvetica,sans-serif;
+        font-size: 14px;
+        letter-spacing: 0.35px;
+        line-height: 18px;
+}

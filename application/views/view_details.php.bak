@@ -1,0 +1,213 @@
+<?php
+if(isset($this->session->username)){
+    $username = $this->session->username;
+    $name = $this->session->name;
+}
+?>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="<?=base_url()?>styles/styles.css">
+        <link rel="stylesheet" type="text/css" href="<?=base_url()?>styles/header.css">
+        <link rel="stylesheet" type="text/css" href="<?=base_url()?>styles/footer.css">
+	<title><?=$display_name?></title>
+        <script src="<?=base_url()?>plugins/jquery-2.1.0.min.js"></script>
+	<script src="http://www.netcu.de/templates/netcu/js/jquery.touchwipe.min.js"></script>
+        <!-- Begin Bootstrap -->
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+        <!-- End Bootstrap -->
+        <!-- Bootstrap Type Ahead -->
+        <script src="<?=base_url()?>plugins/bootstrap3-typeahead.min.js"></script>
+        <?php $this->load->view('view_typeahead'); ?>          
+        <!-- /Bootstrap Type Ahead -->
+        
+        <script>
+         $( document ).ready(function() {
+             $('.details-thumb').mouseover(function(){
+                 $('#largeimg').attr("src", $(this).attr("src"));
+
+             });
+
+	     $("#largeimg").touchwipe({
+		 wipeLeft: function() { alert("left");
+		     var currentImgSrc;
+		     var thumbSources = $(".details-thumb").map(function(){
+			 return $(this).attr('src');
+
+		     }).get();
+		     currentImgSrc = $('#largeimg').attr('src');
+		     var newIndex = 0;
+		     for(i=0;i<thumbSources.length;i++){
+			 if(thumbSources[i]==currentImgSrc) {
+			     if(i==0){
+				 newIndex = thumbSources.length-1;
+			     }
+			     else {
+				 newIndex = i-1;
+			     }
+			     $('#largeimg').attr("src", thumbSources[newIndex]);
+			 }
+		     }
+		 },
+		 wipeRight: function() { alert("right");
+		     var currentImgSrc;
+		     var thumbSources = $(".details-thumb").map(function(){
+			 return $(this).attr('src');
+
+		     }).get();
+		     currentImgSrc = $('#largeimg').attr('src');
+		     console.log(currentImgSrc);
+		     var newIndex = 0;
+		     for(i=0;i<thumbSources.length;i++){
+			 if(thumbSources[i]==currentImgSrc) {
+			     if(i==thumbSources.length-1){
+				 newIndex = 0;
+			     }
+			     else {
+				 newIndex = i+1;
+			     }
+			     $('#largeimg').attr("src", thumbSources[newIndex]);
+			 }
+		     }
+		 },
+		 wipeUp: function() { alert("up"); },
+		 wipeDown: function() { alert("down"); },
+		 min_move_x: 10,
+		 min_move_y: 10,
+		 preventDefaultEvents: true
+	     });
+
+
+         });
+        </script>
+    </head>
+    <body>
+        <div class="container-fluid" style="padding:0px;">
+            <?php $this->load->view('page_top.php');?>
+            <div class="row"><!-- main body row -->
+                <div class="col-md-2" >
+                    <div class="row hidden-xs"><!-- thumbnails row -->
+                        <?php if(trim($pic1)!=""): ?>
+                            <div class="col-md-6 col-sm-3 hidden-xs">
+				<div class="thumbnail">
+				    <img class="details-thumb" src="<?=base_url()?>images/phones/<?=$pic1?>"/>
+				</div>
+                            </div>
+			<?php endif; ?>
+			<?php if(trim($pic2)!=""): ?>
+                            <div class="col-md-6 col-sm-3 hidden-xs">
+				<div class="thumbnail">
+				    <img class="details-thumb" src="<?=base_url()?>images/phones/<?=$pic2?>"/>
+				</div>
+                            </div>
+			<?php endif; ?>
+			<?php if(trim($pic3)!=""): ?>
+                            <div class="col-md-6 col-sm-3 hidden-xs">
+				<div class="thumbnail">
+				    <img class="details-thumb" src="<?=base_url()?>images/phones/<?=$pic3?>"/>
+				</div>
+                            </div>
+			<?php endif; ?>
+			<?php if(trim($pic4)!=""): ?>
+                            <div class="col-md-6 col-sm-3 hidden-xs">
+				<div class="thumbnail">
+				    <img class="details-thumb" src="<?=base_url()?>images/phones/<?=$pic4?>"/>
+				</div>
+                            </div>
+			<?php endif; ?>
+			<?php if(trim($pic5)!=""): ?>
+                            <div class="col-md-6 col-sm-3 hidden-xs">
+				<div class="thumbnail">
+				    <img class="details-thumb" src="<?=base_url()?>images/phones/<?=$pic5?>"/>
+				</div>
+                            </div>
+			<?php endif; ?>
+			<?php if(trim($pic6)!=""): ?>
+                            <div class="col-md-6 col-sm-3 hidden-xs">
+				<div class="thumbnail">
+				    <img class="details-thumb" src="<?=base_url()?>images/phones/<?=$pic6?>"/>
+				</div>
+                            </div>
+			<?php endif; ?>
+			<?php if(trim($pic7)!=""): ?>
+                            <div class="col-md-6 col-sm-3 hidden-xs">
+				<div class="thumbnail">
+				    <img class="details-thumb" src="<?=base_url()?>images/phones/<?=$pic7?>"/>
+				</div>
+                            </div>
+			<?php endif; ?>
+                    </div><!-- /thumbnails row -->
+                </div>
+                <div class="col-md-3">
+                    <img id="largeimg" class="largeimg" src="<?=base_url()?>images/phones/<?=$pic1?>"/>
+                </div><!-- /middle col -->
+                <div class="col-md-7">
+                    <h3><?=$display_name?></h3>
+                    <p>by <b><?=$brand?></b></p>
+                    <hr/>
+                    <h4 class="price">MVR <?=$price?></h4>
+                    <h4 style="margin-bottom:25px;"><span class="glyphicon glyphicon-earphone"></span>&nbsp;&nbsp;7899987</h4>
+                    <h4 class="<?=$in_stock_class?>"><?=$in_stock?></h4>
+                    <dl class="dl-horizontal">
+                        <dt style="text-align:left;">Storage Capacity:</dt>
+                        <dd style="text-align:left;"><?=$internal_storage?> GB</dd>
+                    </dl>
+                    <dl class="dl-horizontal">
+                        <dt style="text-align:left;">Colour:</dt>
+                        <dd style="text-align:left;"><?=$colour?></dd>
+                    </dl>
+                    <dl class="dl-horizontal">
+                        <dt style="text-align:left;">Camera:</dt>
+                        <dd style="text-align:left;"><?=$camera?></dd>
+                    </dl>
+                    <dl class="dl-horizontal">
+                        <dt style="text-align:left;">Screen:</dt>
+                        <dd style="text-align:left;"><?=$screen?> inches</dd>
+                    </dl>
+                    <dl class="dl-horizontal">
+                        <dt style="text-align:left;">Dimension:</dt>
+                        <dd style="text-align:left;"><?=$dimension?></dd>
+                    </dl>
+                    <dl class="dl-horizontal">
+                        <dt style="text-align:left;">Operating System:</dt>
+                        <dd style="text-align:left;"><?=$os_type?> <?=$os?></dd>
+                    </dl>
+                    <?php if($box_items!=""):?>
+                        <dl class="dl-horizontal">
+                            <dt style="text-align:left;">Box Items:</dt>
+                            <dd style="text-align:left;"><?=$box_items?></dd>
+                        </dl>
+                    <?php endif;?>
+                    <h4 style="margin-top:30px;"><?=$short_summary?></h4>
+                    <p><?=$description?></p>
+
+                    <div class="row">
+                        <h3>Similar Phones</h3>
+                        <?php foreach($similarPhones as $similarPhone): ?>
+                            <div class='col-lg-3 col-md-3 col-sm-3'>
+                                <div class="thumbnail">
+                                    <a href='<?=$similarPhone[2]?>'>
+                                        <img class='similar-phones-img' src='<?=base_url()?>images/phones/<?=$similarPhone[0]?>'/>
+                                        <div class="caption"><small><?=$similarPhone[1]?></small></div>
+                                    </a>
+                                </div>
+                            </div>
+                        <?php endforeach; ?>
+                    </div>
+                </div><!-- /right col -->
+            </div><!-- /main body row -->
+            <div class="row">
+                <div class="col-md-12">
+                    <?php $this->load->view('footer.php');?>                    
+                </div>
+            </div>    
+        </div><!--container-flud -->
+    </body>
+</html>

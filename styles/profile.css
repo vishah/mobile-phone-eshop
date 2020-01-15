@@ -1,0 +1,171 @@
+.main{
+	width:1000px;
+	margin-right:auto;
+	margin-left:auto;
+	padding-left:20px;
+	padding-right:20px;
+	white-space:nowrap;
+}
+
+.top{
+	width:1000px;
+	height:50px;
+	border-bottom:2px solid #E7E7E7;
+	margin-bottom:20px;
+}
+
+.sidebar{
+	width:230px;
+	display:inline-block;
+	float:left;
+	white-space:normal;
+}
+
+.activities{
+	white-space:normal;
+	display:inline-block;
+	float:left;
+	margin-left:25px;
+	margin-right:25px;
+	margin-bottom:200px;
+	width:720px;
+}
+
+.review-box{
+	border-radius: 4px;
+	width:312px;
+	height:387px;
+	display:inline-block;
+	border:1px solid #E7E7E7;
+	padding:10px;
+	margin-right:20px;
+	margin-bottom:20px;
+	float:left;
+}
+
+.review-box .cover{
+	margin-right:10px;
+	margin-bottom:10px;
+	width:auto;height:90px;float:left;
+}
+
+.review-box .date{
+	clear:left;
+	color: #AAA;
+	font-family: Arial,sans-serif;
+	font-size: 12px;
+	line-height: 18px;
+}
+
+.review-box .details{
+	color: #333;
+	font-family: Arial,sans-serif;
+	font-size: 13px;
+	line-height: 19px;
+}
+
+.review-box .action{
+	border-collapse: collapse;
+	color: #888;
+	font-family: Arial,sans-serif;
+	font-size: 13px;
+	line-height: 19px;
+}
+
+.review-box .book-title{
+border-collapse: collapse;
+color: #E47911;
+cursor: pointer;
+display: block;
+font-family: Arial,sans-serif;
+font-size: 13px;
+line-height: 19px;
+max-height: 40px;
+overflow: hidden;
+overflow-x: hidden;
+overflow-y: hidden;
+
+}
+
+.namepic{
+	border-bottom:2px solid #E7E7E7;
+	padding-top:0px;
+	padding-bottom:25px;
+}
+.aboutme{
+	border-bottom:2px solid #E7E7E7;
+	padding-top:0px;
+	padding-bottom:25px;
+}
+
+.small-title{
+color: #999;
+display: block;
+font-family: verdana;
+font-size: 10px;
+letter-spacing: 1px;
+line-height: 17px;
+text-transform: uppercase;
+padding-top:25px;
+}
+
+.sec-detail{
+color: #333;
+font-family: Arial,sans-serif;
+font-size: 13px;
+line-height: 19px;
+}
+
+.namepic .profilephoto{
+	border:2px solid #E7E7E7;
+}
+
+.namepic .name{
+	color: #333;
+	font-family: arial;
+	font-size: 16px;
+	font-weight: 700;
+	line-height: 21px;
+	word-wrap: break-word;
+	margin-top:25px;
+}
+
+.namepic .location{
+	color: #888;
+	font-family: Arial,sans-serif;
+	font-size: 12px;
+	line-height: 18px;
+}
+
+.namepic .website{
+	color: #E47911;
+	cursor: pointer;
+	font-family: Arial,sans-serif;
+	font-size: 13px;
+	line-height: 15.6px;
+	outline-color: #E47911;
+	outline-style: none;
+	outline-width: 0px;
+	text-decoration: underline;
+	margin-top:25px;
+}
+
+
+
+
+h1{
+	color: #888;
+	font-family: Arial,sans-serif;
+	font-size: 28px;
+	line-height: 33.6px;
+}
+
+h2{
+	color: #333;
+	font-family: Arial,sans-serif;
+	font-size: 21px;
+	line-height: 27.3px;
+	text-rendering: optimizelegibility;
+}
+
+
